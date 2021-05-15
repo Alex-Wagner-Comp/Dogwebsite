@@ -1,0 +1,29 @@
+{% extends 'base.html' %} 
+
+{% block title %}Database{% endblock %}
+
+{% block content %} 
+<h1>
+    Database Page!
+</h1>
+<button type = "button">
+    <a href= "{% url 'index' %}" >Home!</a>
+</button>
+<div>
+    <p>
+        {% for Dog in data %}
+            {{ Dog.firstname }},
+            {{ Dog.lastname }},
+            {{ Dog.dogname }},
+            {{ Dog.dogbreed }},
+            {{ Dog.doggender }},
+            {{ Dog.dogsize }},
+            {{ Dog.doghealth }},
+            {{ Dog.doghealthphone}} <br>
+        {% endfor %}
+
+    </p>
+
+</div>
+
+{% endblock %}

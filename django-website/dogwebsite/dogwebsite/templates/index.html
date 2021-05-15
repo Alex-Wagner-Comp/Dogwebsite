@@ -1,0 +1,28 @@
+{% extends 'base.html' %} 
+
+{% block title %}Home{% endblock %}
+
+{% block content %} 
+<h1>
+    Anna's Grooming Homepage
+</h1>
+
+<button type = "button">
+    <a href= "{% url 'adddog' %}" >Add a new dog!</a>
+</button>
+<br>
+<br>
+<button type = "button">
+    <a href= "{% url 'appt' %}" >Add an appointment!</a>
+</button>
+<br>
+<br>
+<button type = "button">
+    <a href = "{% url 'showdata' %}">View Database!</a>
+</button>
+<br>
+<br>
+<button>
+    <a href="{% url 'downloaddata' %}">Download Database File!</a>
+</button>
+{% endblock %}
